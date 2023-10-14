@@ -176,6 +176,14 @@
         "env": []
     },
     {
+        "id": "7bf61b142c5e7182",
+        "type": "tab",
+        "label": "Flow 7",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "a4e15eb8.7e05b8",
         "type": "influxdb",
         "hostname": "localhost",
@@ -316,6 +324,74 @@
         "rejectUnauthorized": true
     },
     {
+        "id": "a1fa8edf964cb6b3",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "foxesscloud.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "4a6a4ac55c60a4cc",
+        "type": "influxdb",
+        "hostname": "localhost",
+        "port": "8086",
+        "protocol": "http",
+        "database": "mydb",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "https://influx-europe.iplon.co.in/",
+        "rejectUnauthorized": false
+    },
+    {
+        "id": "25287a352362ae63",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "iplon-pvindia.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
         "id": "5b3dccc565744020",
         "type": "postgresdb",
         "cfgname": "",
@@ -437,74 +513,6 @@
                 "py": 0
             }
         }
-    },
-    {
-        "id": "a1fa8edf964cb6b3",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "foxesscloud.com",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "4a6a4ac55c60a4cc",
-        "type": "influxdb",
-        "hostname": "localhost",
-        "port": "8086",
-        "protocol": "http",
-        "database": "mydb",
-        "name": "",
-        "usetls": false,
-        "tls": "",
-        "influxdbVersion": "2.0",
-        "url": "https://influx-europe.iplon.co.in/",
-        "rejectUnauthorized": false
-    },
-    {
-        "id": "25287a352362ae63",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "iplon-pvindia.com",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
     },
     {
         "id": "c93aba308e8054ee",
@@ -19301,6 +19309,51 @@
         "statusType": "auto",
         "x": 910,
         "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c32b402ea3f34b49",
+        "type": "inject",
+        "z": "7bf61b142c5e7182",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "c67103dbc8c5189b"
+            ]
+        ]
+    },
+    {
+        "id": "c67103dbc8c5189b",
+        "type": "debug",
+        "z": "7bf61b142c5e7182",
+        "name": "debug 253",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 100,
         "wires": []
     }
 ]

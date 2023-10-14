@@ -176,14 +176,6 @@
         "env": []
     },
     {
-        "id": "6fb6eed13d60dd18",
-        "type": "tab",
-        "label": "Flow 7",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "a4e15eb8.7e05b8",
         "type": "influxdb",
         "hostname": "localhost",
@@ -19309,75 +19301,6 @@
         "statusType": "auto",
         "x": 910,
         "y": 80,
-        "wires": []
-    },
-    {
-        "id": "97199f518c9b4839",
-        "type": "http request",
-        "z": "6fb6eed13d60dd18",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "https://www.solrenview.com/srvp/FSC/SRV/getDetailedAnalyticsInfo.php?dataInterval=300&deviceIndex=36470&par=sz0,sz1,sz2,sz3,sz4,sz5,sz6,sz7&startIntervalTs=2023-10-05%2004:00:00&endIntervalTs=2023-10-05%2004:05:00&endDuration=2023-10-06%2000:00:00&dataIntervalStr=Minute",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 250,
-        "y": 140,
-        "wires": [
-            [
-                "9bcadc55de8be83f"
-            ]
-        ]
-    },
-    {
-        "id": "9e441091257626e0",
-        "type": "inject",
-        "z": "6fb6eed13d60dd18",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 140,
-        "wires": [
-            [
-                "97199f518c9b4839"
-            ]
-        ]
-    },
-    {
-        "id": "9bcadc55de8be83f",
-        "type": "debug",
-        "z": "6fb6eed13d60dd18",
-        "name": "debug 253",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 490,
-        "y": 160,
         "wires": []
     }
 ]
